@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sujet</title>
+    <link rel="stylesheet" href="sut.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sujet de chimie -Niveau DEF</h1>
+    </header>
+    <main>
+      <section class="liste-sujet">
+        <h2>Liste des sujets</h2>
+        <ul>
+          <li><a href="2019.html">Sujet-2019</a></li>
+          <li><a href="2020.html">Sujet-2020</a></li>
+          <li><a href="2021.html">Sujet-2021</a></li>
+          <li><a href="2022.html">Sujet-2022</a></li>
+          <li><a href="2023.html">Sujet-2023</a></li>
+          <li><a href="2024.html">Sujet-2024</a></li>
+        </ul>
+      </section>
+    </main>
+    
+    <a href="#" class="back-to-top" id="backToTop">&#8679;</a>
+    <script>
+      // Sélection de la flèche
+const backToTop = document.getElementById('backToTop');
+
+// Afficher la flèche après un certain scroll
+window.addEventListener('scroll', () => {
+ if (window.scrollY > 200) { // après 200px de scroll
+   backToTop.style.display = 'block';
+ } else {
+   backToTop.style.display = 'none';
+ }
+});
+
+// Scroll doux vers le haut
+backToTop.addEventListener('click', (e) => {
+ e.preventDefault();
+ window.scrollTo({
+   top: 0,
+   behavior: 'smooth'
+ });
+});
+
+    </script>
+   
+    <footer>
+      <p>&copy;2025 ChimieDEF</p>
+    </footer>
+  </body>
+</html>

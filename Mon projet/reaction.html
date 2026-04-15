@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Réactions chimiques – Niveau DEF</title>
+  <style>
+    :root{
+      --bg:#f7fafc; --card:#ffffff; --accent:#0ea5a4; --muted:#6b7280; --shadow: 0 6px 18px rgba(16,24,40,0.08);
+      --max-width:900px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, sans-serif;color:#0f172a;background:linear-gradient(180deg,var(--bg),#eef2f7);}    
+    .wrap{max-width:var(--max-width);margin:28px auto;padding:20px}
+    header{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+    .back-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--card);box-shadow:var(--shadow);cursor:pointer;border:1px solid rgba(2,6,23,0.04);text-decoration:none;color:inherit}
+    .back-btn svg{width:18px;height:18px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow);border:1px solid rgba(2,6,23,0.04)}
+    h1{font-size:20px;margin:0 0 8px}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:12px}
+    h2{font-size:16px;margin:14px 0 8px;color:#06364b}
+    p{line-height:1.5;color:#0b1220;margin:8px 0}
+    ul{margin:8px 0 8px 18px}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:800px){.grid{grid-template-columns:1fr 320px}}
+    aside.card{padding:14px}
+    .badge{display:inline-block;background:rgba(14,165,164,0.12);color:var(--accent);padding:4px 8px;border-radius:999px;font-weight:600;font-size:12px}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .btn{padding:8px 10px;border-radius:8px;border:0;background:var(--accent);color:white;cursor:pointer;font-weight:600}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(14,165,164,0.18)}
+    .collapsible{background:#fbfdfe;border-radius:8px;padding:10px;border:1px dashed rgba(6,54,75,0.06);margin-top:8px}
+    footer{font-size:13px;color:var(--muted);margin-top:14px}
+    @media print{.back-btn,.controls{display:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="back-btn" onclick="history.back()">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M12 16L6 10l6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Retour</span>
+      </a>
+      <div>
+        <h1>Réactions chimiques – Niveau DEF</h1>
+        <div class="meta">Leçon simple et claire pour débutants — définitions, exemples, types</div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>1. Qu’est-ce qu’une réaction chimique ?</h2>
+        <p>Une <strong>réaction chimique</strong> est un processus où une ou plusieurs substances (réactifs) se transforment en de nouvelles substances (produits).</p>
+
+        <h2>2. Signes d’une réaction chimique</h2>
+        <ul>
+          <li>Changement de couleur</li>
+          <li>Dégagement de gaz (bulles, odeur)</li>
+          <li>Formation d’un solide (précipité)</li>
+          <li>Chaleur ou lumière dégagée</li>
+        </ul>
+
+        <h2>3. Exemples courants</h2>
+        <ul>
+          <li>Combustion du bois → bois + oxygène → cendres + chaleur + fumée</li>
+          <li>Fer + oxygène → rouille</li>
+          <li>Cuisson d’un œuf → protéines se modifient</li>
+        </ul>
+
+        <h2>4. Types de réactions chimiques</h2>
+        <ul>
+          <li><strong>Combustion :</strong> réaction avec le dioxygène → chaleur et lumière</li>
+          <li><strong>Oxydation :</strong> combinaison avec l’oxygène</li>
+          <li><strong>Précipitation :</strong> formation d’un solide à partir de deux solutions</li>
+          <li><strong>Neutralisation :</strong> acide + base → sel + eau</li>
+        </ul>
+
+        <h2>5. Conservation de la matière</h2>
+        <p>La masse totale des réactifs est égale à celle des produits. Rien ne se perd, tout se transforme.</p>
+
+        <div class="controls">
+          <button class="btn" onclick="document.getElementById('exos').hidden = !document.getElementById('exos').hidden">Afficher / Masquer les exercices</button>
+          <button class="btn ghost" onclick="window.print()">Imprimer</button>
+        </div>
+
+        <div id="exos" class="collapsible" hidden>
+          <h2>Exercices</h2>
+          <ol>
+            <li>Donne deux signes indiquant qu’une réaction chimique a eu lieu.</li>
+            <li>Exemple de réaction chimique dans la vie quotidienne.</li>
+            <li>Qu’est-ce que la combustion ?</li>
+            <li>Explique la loi de conservation de la matière.</li>
+            <li>Nommer un type de réaction chimique et donner un exemple.</li>
+          </ol>
+          <p>Envoie tes réponses pour correction 😊</p>
+        </div>
+      </section>
+
+      <aside class="card">
+        <span class="badge">Niveau DEF</span>
+        <h3 style="margin-top:12px;margin-bottom:6px;font-size:15px">Résumé rapide</h3>
+        <ul>
+          <li>Réaction chimique : transformation de substances.</li>
+          <li>Signes : changement de couleur, gaz, précipité, chaleur.</li>
+          <li>Types : combustion, oxydation, précipitation, neutralisation.</li>
+          <li>Matière conservée.</li>
+        </ul>
+
+        <footer>
+          <p>Comme pour les autres leçons, tu peux demander PDF ou version multi-leçons intégrées.</p>
+        </footer>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>

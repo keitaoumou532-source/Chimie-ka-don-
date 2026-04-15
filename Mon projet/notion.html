@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notions de Base - Chimie (Niveau DEF)</title>
+    <style>
+      :root {
+        --bg: #f7fafc;
+        --card: #ffffff;
+        --accent: #0ea5a4;
+        --muted: #6b7280;
+        --shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+        --max-width: 900px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color: #0f172a;
+        background: linear-gradient(180deg, var(--bg), #eef2f7);
+      }
+      .wrap {
+        max-width: var(--max-width);
+        margin: 28px auto;
+        padding: 20px;
+      }
+
+      header {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 18px;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+        cursor: pointer;
+        border: 1px solid rgba(2, 6, 23, 0.04);
+        text-decoration: none;
+        color: inherit;
+      }
+      .back-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(2, 6, 23, 0.04);
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 8px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+
+      h2 {
+        font-size: 16px;
+        margin: 14px 0 8px;
+        color: #06364b;
+      }
+      p {
+        line-height: 1.5;
+        color: #0b1220;
+        margin: 8px 0;
+      }
+      ul {
+        margin: 8px 0 8px 18px;
+      }
+      code {
+        background: #f3f4f6;
+        padding: 2px 6px;
+        border-radius: 6px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      @media (min-width: 800px) {
+        .grid {
+          grid-template-columns: 1fr 320px;
+        }
+      }
+
+      aside.card {
+        padding: 14px;
+      }
+      .badge {
+        display: inline-block;
+        background: rgba(14, 165, 164, 0.12);
+        color: var(--accent);
+        padding: 4px 8px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 12px;
+      }
+
+      .exercise {
+        margin-top: 8px;
+      }
+      .exercise li {
+        margin-bottom: 10px;
+      }
+
+      .controls {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .btn {
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 0;
+        background: var(--accent);
+        color: white;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid rgba(14, 165, 164, 0.18);
+      }
+
+      .collapsible {
+        background: #fbfdfe;
+        border-radius: 8px;
+        padding: 10px;
+        border: 1px dashed rgba(6, 54, 75, 0.06);
+        margin-top: 8px;
+      }
+
+      footer {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 14px;
+      }
+
+      /* small print-friendly tweaks */
+      @media print {
+        body {
+          background: white;
+        }
+        .back-btn,
+        .controls {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="back-btn" onclick="history.back()" title="Retour">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path
+              d="M12 16L6 10l6-6"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Retour</span>
+        </a>
+        <div>
+          <h1>Notions de Base - Chimie (Niveau DEF)</h1>
+          <div class="meta">
+            Leçon claire et concise pour débutants — définitions, exemples,
+            exercices
+          </div>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="card" aria-labelledby="titre">
+          <h2 id="titre">1. Qu’est-ce que la chimie ?</h2>
+          <p>
+            La <strong>chimie</strong> est la science qui étudie la
+            <strong>matière</strong>, ses propriétés et les transformations
+            qu’elle subit. Elle explique de quoi sont faits les objets et
+            comment ils changent.
+          </p>
+
+          <h2>2. La matière</h2>
+          <p>
+            Tout ce qui nous entoure est de la <strong>matière</strong> (eau,
+            air, bois, métal, toi...). La matière a toujours une
+            <strong>masse</strong> et un <strong>volume</strong>.
+          </p>
+
+          <h2>3. Les états de la matière</h2>
+          <ul>
+            <li>
+              <strong>Solide :</strong> forme propre et volume propre (ex:
+              pierre, glace).
+            </li>
+            <li>
+              <strong>Liquide :</strong> pas de forme propre mais volume propre
+              (ex: eau).
+            </li>
+            <li>
+              <strong>Gazeux :</strong> pas de forme ni de volume propre (ex:
+              air, vapeur).
+            </li>
+          </ul>
+
+          <h2>4. Corps purs et mélanges</h2>
+          <p>
+            <strong>Corps pur :</strong> une seule substance (ex : eau
+            distillée, fer pur).<br />
+            <strong>Mélange :</strong> plusieurs substances.
+          </p>
+          <ul>
+            <li>
+              <em>Mélange homogène :</em> composants invisibles (ex: eau +
+              sucre).
+            </li>
+            <li>
+              <em>Mélange hétérogène :</em> composants visibles (ex: eau +
+              sable).
+            </li>
+          </ul>
+
+          <h2>5. Atome et molécule</h2>
+          <p>
+            <strong>Atome :</strong> plus petite particule d’un élément chimique
+            (ex : H, O).<br />
+            <strong>Molécule :</strong> assemblage d’atomes liés (ex :
+            H<sub>2</sub>O = eau, CO<sub>2</sub> = dioxyde de carbone).
+          </p>
+
+          <h2>6. Transformations</h2>
+          <p>
+            <strong>Physique :</strong> la nature de la substance ne change pas
+            (ex : fusion de la glace).<br />
+            <strong>Chimique :</strong> la nature change et de nouvelles
+            substances apparaissent (ex : bois qui brûle, fer qui rouille).
+          </p>
+
+          <h2>7. Grandeurs de base</h2>
+          <ul>
+            <li><strong>Masse :</strong> unité g ou kg (balance).</li>
+            <li><strong>Volume :</strong> unité L ou mL.</li>
+            <li><strong>Température :</strong> °C (thermomètre).</li>
+          </ul>
+
+          <h2>8. Séparation des mélanges</h2>
+          <p>Méthodes simples :</p>
+          <ul>
+            <li><strong>Filtration</strong> (séparer solide + liquide)</li>
+            <li>
+              <strong>Décantation</strong> (séparer liquides non miscibles)
+            </li>
+            <li>
+              <strong>Distillation</strong> (séparer liquides selon leurs points
+              d'ébullition)
+            </li>
+            <li>
+              <strong>Évaporation</strong> (évaporer le liquide pour récupérer
+              le solide)
+            </li>
+          </ul>
+
+          <h2>9. Quelques règles d’orthographe & remarques</h2>
+          <p>
+            Accorde toujours le verbe avec le sujet. Exemple :
+            <em>Les filles chantent.</em>
+          </p>
+
+          <div class="controls">
+            <button
+              class="btn"
+              onclick="document.getElementById('exos').classList.toggle('open')"
+            >
+              Afficher / Masquer les exercices
+            </button>
+            <button class="btn ghost" onclick="window.print()">Imprimer</button>
+          </div>
+
+          <div id="exos" class="collapsible" hidden>
+            <h2>Exercices</h2>
+            <ol class="exercise">
+              <li>
+                Donne les trois états de la matière avec un exemple chacun.
+              </li>
+              <li>
+                Quel est la différence entre un corps pur et un mélange ? Donne
+                un exemple.
+              </li>
+              <li>Combien d’atomes y a-t-il dans H<sub>2</sub>O ?</li>
+              <li>
+                Donne une transformation chimique et une transformation
+                physique.
+              </li>
+              <li>Donne une méthode pour séparer un mélange eau + sable.</li>
+            </ol>
+            <p>Envoie-moi tes réponses et je te corrige 😊</p>
+          </div>
+
+          <script>
+            // Accessible toggle: keep using hidden attribute for print friendliness
+            const exos = document.getElementById("exos");
+            document.querySelector(".btn").addEventListener("click", () => {
+              if (exos.hidden) {
+                exos.hidden = false;
+              } else {
+                exos.hidden = true;
+              }
+            });
+          </script>
+        </section>
+
+        <aside class="card" aria-label="Résumé et ressources">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span class="badge">Niveau DEF</span>
+            <small style="color: var(--muted)">Cours condensé</small>
+          </div>
+
+          <h3 style="margin-top: 12px; margin-bottom: 6px; font-size: 15px">
+            Résumé rapide
+          </h3>
+          <ul>
+            <li>Matière = tout ce qui a masse et volume.</li>
+            <li>3 états : solide, liquide, gaz.</li>
+            <li>Atome = unité de base ; molécule = groupe d'atomes.</li>
+            <li>
+              Transformations : physiques (réversibles) / chimiques (nouvelles
+              substances).
+            </li>
+          </ul>
+
+          <h3 style="margin-top: 12px">
+            Conseils pour l’enseignant / l’apprenant
+          </h3>
+          <p style="color: var(--muted)">
+            Ajoute des expériences simples : fondre de la glace, filtrer un
+            mélange eau-sable, observer la combustion d'une bougie (avec
+            sécurité). Les activités concrètes aident beaucoup à comprendre.
+          </p>
+
+          <footer>
+            <p>
+              Besoin d'un PDF, d'une version imprimable stylée ou d'une
+              intégration React ? Dis-moi ce que tu veux et je l'adapte.
+            </p>
+          </footer>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOLO</title>
+  </head>
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --card: #ffffff;
+      --accent: #0ea5a4;
+      --muted: #6b7280;
+      --shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+      --max-width: 900px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: #0f172a;
+      background: linear-gradient(180deg, var(--bg), #eef2f7);
+    }
+    .wrap {
+      max-width: var(--max-width);
+      margin: 28px auto;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      border: 1px solid rgba(2, 6, 23, 0.04);
+      text-decoration: none;
+      color: inherit;
+    }
+    .back-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(2, 6, 23, 0.04);
+    }
+    h1 {
+      font-size: 20px;
+      margin: 0 0 8px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: 16px;
+      margin: 14px 0 8px;
+      color: #06364b;
+    }
+    p {
+      line-height: 1.5;
+      color: #0b1220;
+      margin: 8px 0;
+    }
+    ul {
+      margin: 8px 0 8px 18px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr 320px;
+      }
+    }
+    aside.card {
+      padding: 14px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(14, 165, 164, 0.12);
+      color: var(--accent);
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .btn {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 0;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn.ghost {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid rgba(14, 165, 164, 0.18);
+    }
+    .collapsible {
+      background: #fbfdfe;
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px dashed rgba(6, 54, 75, 0.06);
+      margin-top: 8px;
+    }
+    footer {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+    @media print {
+      .back-btn,
+      .controls {
+        display: none;
+      }
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="back-btn" onclick="history.back()">
+          <svg viewBox="0 0 20 20" fill="none">
+            <path
+              d="M12 16L6 10l6-6"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Segin</span>
+        </a>
+        <div>
+          <h1>Fɔlɔ ni Ji – DEF kɛlɛya</h1>
+          <div class="meta">
+            Kalan dɔgɔ ani nɔgɔman — kɛlɛyaw, fɛn bɔlen, ani ji ka sira
+          </div>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="card">
+          <h2>1. Fɔlɔ : a ye mun ye ?</h2>
+          <p>
+            Fɔlɔ ye <strong>gaz bɔlen</strong> ye min bɛ an ka sigida kɔnɔ. A
+            <strong>tɛ ye</strong> nka a <strong>bɛ an ka niyɔgɔya</strong>.
+          </p>
+          <ul>
+            <li>
+              <strong>Dioxygène (O₂)</strong> : ka 21 % kɔrɔ → bɛ an ka sɔgɔli
+              dɛmɛ.
+            </li>
+            <li>
+              <strong>Dioxyde de carbone (CO₂)</strong> : ka 1 % tɛ → fɛn bɛɛ bɛ
+              a bɔ.
+            </li>
+            <li>
+              <strong>Diazote (N₂)</strong> : ka 78 % kɔrɔ → fɔlɔ ka gazba ye.
+            </li>
+          </ul>
+
+          <h2>2. Fɔlɔ ka kɛlɛyaw</h2>
+          <ul>
+            <li>Fɔlɔ bɛ <strong>kɔgɔ</strong> sɔrɔ.</li>
+            <li>Fɔlɔ bɛ <strong>dankan</strong> kɛ.</li>
+            <li>Fɔlɔ bɛ se ka <strong>sigisigi</strong>.</li>
+            <li>Fɔlɔ bɛ <strong>bonya</strong> sɔrɔ.</li>
+          </ul>
+
+          <h2>3. Ji ka bonya</h2>
+          <p>Ji ye niyɔgɔfɛn ye : mɔgɔw, juguw ani yiriw bɛ a fɛ.</p>
+          <p>
+            Ji bɛ sɔrɔ <strong>ji ba</strong>, <strong>ji siraw</strong>,
+            <strong>jiw kɔnɔ</strong>, <strong>jigi ba</strong> ani fɔlɔ kɔnɔ ka
+            <strong>ji fɔlɔ</strong> ye.
+          </p>
+
+          <h2>4. Ji ka sigilenw</h2>
+          <ul>
+            <li><strong>Jiginnen :</strong> jigi</li>
+            <li><strong>Ji :</strong> ji</li>
+            <li><strong>Fɔlɔ :</strong> ji fɔlɔ</li>
+          </ul>
+
+          <h2>5. Ji ka sira (cycle)</h2>
+          <ul>
+            <li><strong>Ji bɔli</strong> : ji bɛ yɛlɛma ka kɛ fɔlɔ.</li>
+            <li><strong>Kɔgɔni</strong> : fɔlɔ bɛ yɛlɛma ka kɛ sà.</li>
+            <li><strong>Ji bɔli</strong> : san, jigi san, kɔgɔ san.</li>
+            <li>
+              <strong>Ji sigili</strong> : ji bɛ segin ka taa ji siraw ani ji ba
+              fɛ.
+            </li>
+          </ul>
+
+          <h2>6. Ji ka kɛlɛyaw</h2>
+          <ul>
+            <li>
+              Ji bɛ <strong>kɔgɔ</strong> ani <strong>bonya</strong> sɔrɔ.
+            </li>
+            <li>
+              Ji bɛ se ka <strong>fɛn dɔw jɛ</strong>
+              (misali : sɔli, sukaro).
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

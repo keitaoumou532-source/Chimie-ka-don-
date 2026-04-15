@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kuma</title>
+</head>
+<body>
+    <script src="chat.js"></script>
+
+    <div
+      id="chat-container"
+      style="
+        width: 350px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 10px;
+      "
+    >
+      <h3 style="text-align: center">Chat IA</h3>
+
+      <div
+        id="messages"
+        style="
+          height: 300px;
+          overflow-y: auto;
+          border: 1px solid #eee;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+        "
+      ></div>
+
+      <input
+        id="user-input"
+        type="text"
+        placeholder="Écris ton message..."
+        style="
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        "
+      />
+
+      <button
+        onclick="sendMessage()"
+        style="
+          margin-top: 10px;
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          background: black;
+          color: white;
+        "
+      >
+        Envoyer
+      </button>
+    </div>
+
+    <footer>
+      <p>&copy;2025 ChimieDEF</p>
+    </footer>
+  </body>
+</html>
+
+</body>
+</html>

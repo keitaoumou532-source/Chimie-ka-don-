@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kimiya</title>
+  </head>
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --card: #ffffff;
+      --accent: #0ea5a4;
+      --muted: #6b7280;
+      --shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+      --max-width: 900px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial;
+      color: #0f172a;
+      background: linear-gradient(180deg, var(--bg), #eef2f7);
+    }
+    .wrap {
+      max-width: var(--max-width);
+      margin: 28px auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      border: 1px solid rgba(2, 6, 23, 0.04);
+      text-decoration: none;
+      color: inherit;
+    }
+    .back-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(2, 6, 23, 0.04);
+    }
+    h1 {
+      font-size: 20px;
+      margin: 0 0 8px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin: 14px 0 8px;
+      color: #06364b;
+    }
+    p {
+      line-height: 1.5;
+      color: #0b1220;
+      margin: 8px 0;
+    }
+    ul {
+      margin: 8px 0 8px 18px;
+    }
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr 320px;
+      }
+    }
+
+    aside.card {
+      padding: 14px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(14, 165, 164, 0.12);
+      color: var(--accent);
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .exercise {
+      margin-top: 8px;
+    }
+    .exercise li {
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .btn {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 0;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn.ghost {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid rgba(14, 165, 164, 0.18);
+    }
+
+    .collapsible {
+      background: #fbfdfe;
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px dashed rgba(6, 54, 75, 0.06);
+      margin-top: 8px;
+    }
+
+    footer {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    /* small print-friendly tweaks */
+    @media print {
+      body {
+        background: white;
+      }
+      .back-btn,
+      .controls {
+        display: none;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <a class="back-btn" onclick="history.back()" title="Retour">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path
+            d="M12 16L6 10l6-6"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span>Retour</span>
+      </a>
+      <div>
+        <h1>Kimiya kɔrɔkɛlɛnw – DEF kɛlɛya</h1>
+        <div class="meta">
+          Kalan sɔrɔsira ani dɔgɔya — kɔrɔbɔliw, misaliw, ani jɛkulu
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card" aria-labelledby="titre">
+        <h2 id="titre">1. Kimiya ye mun ye ?</h2>
+        <p>
+          <strong>Kimiya</strong> ye kalan ye min bɛ
+          <strong>fɛn bɛɛ</strong> kalan, a kɛlɛyalenw ani a bɔlenw. A bɛ an ka
+          fɛnnu kɔrɔ ani u bɛ se ka yɛlɛma cogo min.
+        </p>
+
+        <h2>2. Fɛn (matière)</h2>
+        <p>
+          Fɛn bɛɛ min bɛ an ka sigida kɔnɔ ye
+          <strong>fɛn</strong> ye (ji, fɔlɔ, yiri, wulu, i yɔrɔ). Fɛn bɛɛ bɛ
+          <strong>kɔgɔ</strong> ani <strong>bonya</strong> sɔrɔ.
+        </p>
+
+        <h2>3. Fɛn kɛlɛya sigilenw</h2>
+        <ul>
+          <li>
+            <strong>Jiginnen :</strong> a ka cogo ani a ka bonya bɛ se ka dɔ
+            (misali : kɔgɔ, jigi).
+          </li>
+          <li>
+            <strong>Ji :</strong> a ka cogo tɛ sigi, nka a ka bonya bɛ sigi
+            (misali : ji).
+          </li>
+          <li>
+            <strong>Fɔlɔ :</strong> a tɛ cogo ni bonya sɔrɔ (misali : fɔlɔ, ji
+            fɔlɔ).
+          </li>
+        </ul>
+
+        <h2>4. Fɛn kelen ani fɛn bɔlen</h2>
+        <p>
+          <strong>Fɛn kelen :</strong> fɛn kelen dɔrɔn (misali : ji kelen, fer
+          kelen).<br />
+          <strong>Fɛn bɔlen :</strong> fɛn caman bɔlen.
+        </p>
+        <ul>
+          <li>
+            <em>Fɛn bɔlen kelenkelen :</em> fɛnnu tɛ ye (misali : ji + sukaro).
+          </li>
+          <li>
+            <em>Fɛn bɔlen fɔlɔfɔlɔ :</em> fɛnnu bɛ ye (misali : ji + tugu).
+          </li>
+        </ul>
+
+        <h2>5. Atɔmu ani molekuli</h2>
+        <p>
+          <strong>Atɔmu :</strong> fɛn dɔgɔnin ye min ye kɔrɔkɛlen ye (misali :
+          H, O).<br />
+          <strong>Molekuli :</strong> atɔmu caman bɔlen (misali : H<sub>2</sub>O
+          = ji, CO<sub>2</sub> = karbon fɔlɔfila).
+        </p>
+
+        <h2>6. Yɛlɛmaliw</h2>
+        <p>
+          <strong>Yɛlɛmali fɛn :</strong> fɛn kɔrɔ tɛ yɛlɛma (misali : jigi ka
+          jigin).<br />
+          <strong>Yɛlɛmali kimiya :</strong> fɛn kɔrɔ bɛ yɛlɛma, fɛn kura bɛ bɔ
+          (misali : yiri ka jɛ, fer ka sɔgɔ).
+        </p>
+
+        <h2>7. Kɔrɔkɛlen sigilenw</h2>
+        <ul>
+          <li><strong>Kɔgɔ :</strong> g walima kg (balansi).</li>
+          <li><strong>Bonya :</strong> L walima mL.</li>
+          <li><strong>Sisan :</strong> °C (sisan kɛlɛbaga).</li>
+        </ul>
+
+        <h2>8. Fɛn bɔlen farali</h2>
+        <p>Cogo dɔgɔw :</p>
+        <ul>
+          <li><strong>Filitiri</strong> (fɛn jiginnen + ji)</li>
+          <li><strong>Dekantasi</strong> (ji fila min tɛ bɔ)</li>
+          <li>
+            <strong>Distilasi</strong> (jiw farali u ka kɔgɔtɔgɔ sisan sisan)
+          </li>
+          <li><strong>Ji bɔli</strong> (ji ka bɔ ka fɛn jiginnen sɔrɔ)</li>
+        </ul>
+
+        <h2>9. Kɔrɔbɔliw dɔ ani kɔlɔsiw</h2>
+        <p>
+          Tuma bɛɛ, kɛ verbe sigi sujet la. Misali :
+          <em>Muso bɛɛ bɛ don.</em>
+        </p>
+
+        <div class="controls">
+          <button
+            class="btn"
+            onclick="document.getElementById('exos').classList.toggle('open')"
+          >
+            Jɛkuluw jira / dogoya
+          </button>
+          <button class="btn ghost" onclick="window.print()">Printi kɛ</button>
+        </div>
+
+        <div id="exos" class="collapsible" hidden>
+          <h2>Jɛkuluw</h2>
+          <ol class="exercise">
+            <li>Fɛn kɛlɛya sigilen saba fɔ ni misali kelen kelen.</li>
+            <li>Mun ye fɛn kelen ani fɛn bɔlen ka fara ? Misali kelen di.</li>
+            <li>Atɔmu joli bɛ H<sub>2</sub>O kɔnɔ ?</li>
+            <li>Yɛlɛmali kimiya kelen ani yɛlɛmali fɛn kelen fɔ.</li>
+            <li>Cogo kelen fɔ min bɛ se ka ji ani tugu farala.</li>
+          </ol>
+          <p>I ka jaabiw ci n ye, n bɛ u ladɔn 😊</p>
+        </div>
+      </section>
+
+      <aside class="card" aria-label="Kɔrɔsira ani dɛmɛ">
+        <span class="badge">DEF kɛlɛya</span>
+
+        <h3>Kɔrɔsira dɔgɔ</h3>
+        <ul>
+          <li>Fɛn = mun min bɛ kɔgɔ ani bonya sɔrɔ.</li>
+          <li>Sigilen saba : jiginnen, ji, fɔlɔ.</li>
+          <li>Atɔmu = fɛn dɔgɔ ; molekuli = atɔmu bɔlen.</li>
+          <li>Yɛlɛmaliw : fɛn (bɛ segin) / kimiya (fɛn kura bɔ).</li>
+        </ul>
+
+        <h3>Kalanbaga ani kalan kɛla dɛmɛ</h3>
+        <p>
+          Kɛ jɛkulu fɛnnenw : jigi ka jigin, ji ani tugu filitiri, fitiri jɛ (ka
+          kɔlɔsi). Jɛkulu fɛnnenw bɛ kalan nɔgɔya kosɛbɛ.
+        </p>
+      </aside>
+    </main>
+  </body>
+</html>
